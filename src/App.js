@@ -7,15 +7,22 @@ class App extends Component {
     super();
     this.state = {
       makeupItems: [],
-      itemSearch: ""
+      itemSearch: "",
+      filteredMakeupItems: []
     }
   }
 
   componentDidMount() {
+    console.log("Mounted");
+    
     axios({
-        url: `http://makeup-api.herokuapp.com/api/v1/products.json?product_type=${this.state.itemSearch}`,
+        url: "http://makeup-api.herokuapp.com/api/v1/products.json",
         method: 'GET',
-        dataType: 'json'
+        dataType: 'json',
+        params: {
+          product_tags: "Vegan",
+          product_type: this.state.itemSearch
+        }
     })
     .then( (res) => {
       const makeupArray = res.data;
@@ -24,7 +31,7 @@ class App extends Component {
         makeupItems: makeupArray
       })
       //(e.g. price, link to purchase, color values, photo, original rating, would repurchase/wouldn’t repurchase rating)
-      console.log(makeupArray[0]);
+      console.log(makeupArray);
     })
   }
 
@@ -36,6 +43,15 @@ class App extends Component {
     console.log(event.target.value);
   }
 
+  handleClick = (event, userChoice) => {
+    event.preventDefault();
+    const filteredData = this.state.makeupItems.filter((items) => {
+      return items[userChoice] === this.inputSearch(event);
+    })
+    console.log(filteredData);
+    
+  }
+
   render() {
     console.log('Rendering...')
     return (
@@ -44,8 +60,10 @@ class App extends Component {
         <form action="">
           <label htmlFor="item">Enter in a product name</label><br/>
           <input onChange={this.inputSearch} type="textarea" id="item" value={this.state.itemSearch}/><br/>
+
+          <button onClick={this.handleClick}>Search</button>
         </form>
-        {
+        {/* {
           this.state.makeupItems.map( (product) => {
             return (
               <div>
@@ -59,7 +77,7 @@ class App extends Component {
               </div>
             )
           })
-        }
+        } */}
       </div>
     );
   }
