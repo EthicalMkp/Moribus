@@ -29,7 +29,9 @@ class App extends Component {
       });
       //(e.g. price, link to purchase, color values, photo, original rating, would repurchase/wouldn’t repurchase rating)
       // console.log(makeupArray);
+      console.log(res.data);
     });
+    
   }
 
   inputSearch = (event) => {
@@ -40,14 +42,23 @@ class App extends Component {
     console.log(event.target.value);
   };
 
+  turnToLowerCase = () => {
+    const productName = this.state.itemSearch;
+    const lowercase = productName.toLowerCase();
+    const finalSearch = lowercase.replace(/\s/g, "_")
+    this.setState({ 
+      itemSearch: finalSearch
+    });
+  };
+
   handleClick = (event) => {
     event.preventDefault();
-
     const filteredData = this.state.makeupItems.filter((items) => {
-      return items.product_type == this.state.itemSearch;
+      return items.product_type === this.state.itemSearch;
     });
     this.setState({
       filteredMakeupItems: filteredData,
+      itemSearch: ""
     });
   };
 
@@ -61,12 +72,12 @@ class App extends Component {
           <br />
           <input
             onChange={this.inputSearch}
+            onKeyPress={this.turnToLowerCase}
             type="textarea"
             id="item"
             value={this.state.itemSearch}
           />
           <br />
-
           <button onClick={this.handleClick}>Search</button>
         </form>
         {this.state.filteredMakeupItems.map((product) => {
