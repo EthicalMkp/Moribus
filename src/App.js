@@ -12,25 +12,28 @@ class App extends Component {
     this.state = {
       makeupItems: [],
       itemSearch: "",
-      filteredMakeupItems: [],
-    };
+      filteredMakeupItems: []
+    }
   }
 
   componentDidMount() {
     console.log("Mounted");
-
+    
     axios({
-      url: "http://makeup-api.herokuapp.com/api/v1/products.json",
-      method: "GET",
-      dataType: "json",
-      params: {
-        product_tags: "Vegan",
-        product_type: this.state.itemSearch,
-      },
-    }).then((res) => {
+        url: "http://makeup-api.herokuapp.com/api/v1/products.json",
+        method: 'GET',
+        dataType: 'json',
+        params: {
+          product_tags: "Vegan",
+          product_type: this.state.itemSearch
+        }
+    })
+    .then( (res) => {
+      const makeupArray = res.data;
+
       this.setState({
-        makeupItems: res.data,
-      });
+        makeupItems: makeupArray
+      })
       //(e.g. price, link to purchase, color values, photo, original rating, would repurchase/wouldn’t repurchase rating)
       // console.log(makeupArray);
       console.log(res.data);
