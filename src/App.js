@@ -31,8 +31,10 @@ class App extends Component {
         makeupItems: makeupArray
       })
       //(e.g. price, link to purchase, color values, photo, original rating, would repurchase/wouldn’t repurchase rating)
-      console.log(makeupArray);
-    })
+      // console.log(makeupArray);
+      console.log(res.data);
+    });
+    
   }
 
   inputSearch = ( event ) => {
@@ -43,14 +45,25 @@ class App extends Component {
     console.log(event.target.value);
   }
 
-  handleClick = (event, userChoice) => {
+  turnToLowerCase = () => {
+    const productName = this.state.itemSearch;
+    const lowercase = productName.toLowerCase();
+    const finalSearch = lowercase.replace(/\s/g, "_")
+    this.setState({ 
+      itemSearch: finalSearch
+    });
+  };
+
+  handleClick = (event) => {
     event.preventDefault();
     const filteredData = this.state.makeupItems.filter((items) => {
-      return items[userChoice] === this.inputSearch(event);
-    })
-    console.log(filteredData);
-    
-  }
+      return items.product_type === this.state.itemSearch;
+    });
+    this.setState({
+      filteredMakeupItems: filteredData,
+      itemSearch: ""
+    });
+  };
 
   render() {
     console.log('Rendering...')
@@ -58,9 +71,16 @@ class App extends Component {
       <div className="App">
         <h1>Moribus</h1>
         <form action="">
-          <label htmlFor="item">Enter in a product name</label><br/>
-          <input onChange={this.inputSearch} type="textarea" id="item" value={this.state.itemSearch}/><br/>
-
+          <label htmlFor="item">Enter in a product name</label>
+          <br />
+          <input
+            onChange={this.inputSearch}
+            onKeyPress={this.turnToLowerCase}
+            type="textarea"
+            id="item"
+            value={this.state.itemSearch}
+          />
+          <br />
           <button onClick={this.handleClick}>Search</button>
         </form>
         {/* {
