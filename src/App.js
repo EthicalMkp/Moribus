@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import firebase from "./firebase";
 import axios from "axios";
+import Catalogue from './Catalogue';
+import MakeupDetails from './MakeupDetails';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Footer from './Footer';
 
 class App extends Component {
   constructor() {
@@ -30,70 +34,24 @@ class App extends Component {
       //(e.g. price, link to purchase, color values, photo, original rating, would repurchase/wouldn’t repurchase rating)
       // console.log(makeupArray);
       console.log(res.data);
-    });
-    
+    }); 
   }
-
-  inputSearch = (event) => {
-    event.preventDefault();
-    this.setState({
-      itemSearch: event.target.value,
-    });
-    console.log(event.target.value);
-  };
-
-  turnToLowerCase = () => {
-    const productName = this.state.itemSearch;
-    const lowercase = productName.toLowerCase();
-    const finalSearch = lowercase.replace(/\s/g, "_")
-    this.setState({ 
-      itemSearch: finalSearch
-    });
-  };
-
-  handleClick = (event) => {
-    event.preventDefault();
-    const filteredData = this.state.makeupItems.filter((items) => {
-      return items.product_type === this.state.itemSearch;
-    });
-    this.setState({
-      filteredMakeupItems: filteredData,
-      itemSearch: ""
-    });
-  };
-
+  
   render() {
     console.log("Rendering...");
     return (
-      <div className="App">
-        <h1>Moribus</h1>
-        <form action="">
-          <label htmlFor="item">Enter in a product name</label>
-          <br />
-          <input
-            onChange={this.inputSearch}
-            onKeyPress={this.turnToLowerCase}
-            type="textarea"
-            id="item"
-            value={this.state.itemSearch}
-          />
-          <br />
-          <button onClick={this.handleClick}>Search</button>
-        </form>
-        {this.state.filteredMakeupItems.map((product) => {
-          return (
-            <div>
-              <h2>{product.name}</h2>
-              <p>{product.price}</p>
-              <img src={product.image_link} alt="" />
-              <p>{product.product_link}</p>
-              <p>{product.description}</p>
-              <p>{product.product_type}</p>
-              <p>{product.tag_list[0]}</p>
-            </div>
-          );
-        })}
-      </div>
+      <Router>
+        <div className="App">
+          <header>
+            <h1>Moribus</h1>
+          </header>
+
+          <Route exact path="/" component={ Catalogue } />
+          <Route exact path="/MakeupDetails/:makeupId" component={ MakeupDetails } /> 
+
+          <Footer />
+        </div>
+      </Router> 
     );
   }
 }
