@@ -12,3 +12,16 @@ img {
   height: 300px;
   width: 300px;
 }
+
+.swatch li {
+  display: inline-block;
+    vertical-align: top;
+}
+
+.swatch li span {
+  display: inline-block;
+    min-width: 30px;
+    min-height: 30px;
+    cursor: pointer;
+    position: relative;
+}
