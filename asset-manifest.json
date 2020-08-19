@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Moribus/static/css/main.dc884221.chunk.css",
-    "main.js": "/Moribus/static/js/main.bdc3d42e.chunk.js",
-    "main.js.map": "/Moribus/static/js/main.bdc3d42e.chunk.js.map",
+    "main.js": "/Moribus/static/js/main.6d0e3fe5.chunk.js",
+    "main.js.map": "/Moribus/static/js/main.6d0e3fe5.chunk.js.map",
     "runtime-main.js": "/Moribus/static/js/runtime-main.21ad8030.js",
     "runtime-main.js.map": "/Moribus/static/js/runtime-main.21ad8030.js.map",
     "static/css/2.fb346933.chunk.css": "/Moribus/static/css/2.fb346933.chunk.css",
     "static/js/2.4d023e1c.chunk.js": "/Moribus/static/js/2.4d023e1c.chunk.js",
     "static/js/2.4d023e1c.chunk.js.map": "/Moribus/static/js/2.4d023e1c.chunk.js.map",
     "index.html": "/Moribus/index.html",
-    "precache-manifest.2759efd88d1e7bdb3e03466a52b879b0.js": "/Moribus/precache-manifest.2759efd88d1e7bdb3e03466a52b879b0.js",
+    "precache-manifest.6378caa88c672c2b61083b532c4eed98.js": "/Moribus/precache-manifest.6378caa88c672c2b61083b532c4eed98.js",
     "service-worker.js": "/Moribus/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/Moribus/static/css/2.fb346933.chunk.css.map",
     "static/css/main.dc884221.chunk.css.map": "/Moribus/static/css/main.dc884221.chunk.css.map",
@@ -25,6 +25,6 @@
     "static/css/2.fb346933.chunk.css",
     "static/js/2.4d023e1c.chunk.js",
     "static/css/main.dc884221.chunk.css",
-    "static/js/main.bdc3d42e.chunk.js"
+    "static/js/main.6d0e3fe5.chunk.js"
   ]
 }
