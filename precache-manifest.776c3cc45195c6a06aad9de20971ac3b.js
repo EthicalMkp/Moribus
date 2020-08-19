@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4449954c522d0f6b52cbec9690a7e005",
+    "revision": "9f0ed56d1aec44950a7888e5dfe3b360",
     "url": "/Moribus/index.html"
   },
   {
-    "revision": "f0983b4b5ed09eb7bbb1",
+    "revision": "9483565dcef85978dd31",
     "url": "/Moribus/static/css/2.fb346933.chunk.css"
   },
   {
-    "revision": "7404349c86ec3cba38cb",
+    "revision": "a29d0b3794461121cf28",
     "url": "/Moribus/static/css/main.dc884221.chunk.css"
   },
   {
-    "revision": "f0983b4b5ed09eb7bbb1",
-    "url": "/Moribus/static/js/2.62870e99.chunk.js"
+    "revision": "9483565dcef85978dd31",
+    "url": "/Moribus/static/js/2.4d023e1c.chunk.js"
   },
   {
     "revision": "df2659f20723d9e518ad965c595b69ee",
-    "url": "/Moribus/static/js/2.62870e99.chunk.js.LICENSE.txt"
+    "url": "/Moribus/static/js/2.4d023e1c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7404349c86ec3cba38cb",
-    "url": "/Moribus/static/js/main.a8d07499.chunk.js"
+    "revision": "a29d0b3794461121cf28",
+    "url": "/Moribus/static/js/main.409463b7.chunk.js"
   },
   {
     "revision": "af46d216e1ad73cb3b53",
