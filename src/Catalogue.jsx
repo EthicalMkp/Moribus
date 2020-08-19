@@ -9,8 +9,6 @@ class Catalogue extends Component {
       makeupItems: [],
       itemSearch: "",
       filteredMakeupItems: [],
-      emptyErrorMsg: false,
-      typoErrorMsg: false
     }
   }
 
@@ -32,10 +30,10 @@ class Catalogue extends Component {
       this.setState({
         makeupItems: AllData
       })
-      console.log(res.data[0].id)
+      console.log(this.state.makeupItems.product_type)
     })
   }
-
+  
   inputSearch = (event) => {
     this.setState({
       itemSearch: event.target.value,
@@ -54,68 +52,51 @@ class Catalogue extends Component {
   handleClick = (event) => {
     event.preventDefault();
     if (this.state.itemSearch === "") {
-      this.setState({
-          errorMsg: true,
-      })
-  } else {
-    const productName = this.state.itemSearch;
-    const lowercase = productName.toLowerCase();
-    const finalSearch = lowercase.replace(/\s/g, "_")
+      alert("Please enter a product")
+    } else {
+      const productName = this.state.itemSearch;
+      const lowercase = productName.toLowerCase();
+      const finalSearch = lowercase.replace(/\s/g, "_")
       const filteredData = this.state.makeupItems.filter((items) => {
-        return items.product_type === this.state.itemSearch;
+        return items.product_type === finalSearch;
       });
-      this.setState({
-        filteredMakeupItems: filteredData,
-        itemSearch: finalSearch
-      });
+      if (filteredData.length > 0) {
+        this.setState({
+          filteredMakeupItems: filteredData,
+          itemSearch: ""
+        });
+      } else {
+        alert("Product not found. Please try again")
+      }
     };
   }
 
-
   render() {
-  console.log("filtered makeup", this.state.filteredMakeupItems)
+    console.log("filtered makeup", this.state.filteredMakeupItems)
     return (
       <div className="allItems">
-        { 
-          this.state.errorMsg ?
-          alert("Please enter a product")
-          : null
-        }
         <form action="">
           <label htmlFor="item">Enter in a product name</label>
           <br />
           <input
             onChange={this.inputSearch}
-            // onKeyPress={this.turnToLowerCase}
             type="textarea"
             id="item"
             value={this.state.itemSearch}
-          />
+            />
           <br />
           <button onClick={this.handleClick}>Search</button>
-        </form> 
-          {
-            this.state.makeupItems.map( (product) => {
-              return ( 
-                <div key={product.id} className="makeup">
-                {this.state.filteredMakeupItems.map((product) => {
-                  return (
-                    <div>
-                      <h2>{product.name}</h2>
-                      {/* <p>{product.price_sign} {product.price} {product.currency}</p>
-                      <p>{product.product_link}</p>
-                      <p>{product.description}</p> */}
-                      <Link to={`/makeupDetails/${product.id}`}>
-                        <img src={product.image_link} alt={`${product.name}`} />
-                      </Link>
-                      {/* <p>{product.product_type}</p> */}
-                      {/* <p>{product.tag_list[0]}</p> */}
-                    </div>
-                  ); 
-                })
-              }
-            </div>
-            )
+        </form>
+        {
+          this.state.filteredMakeupItems.map((product) => {
+            return (
+              <div key={product.id} className="makeup">
+                <h2>{product.name}</h2>
+                <Link to={`/makeupDetails/${product.id}`}>
+                  <img src={product.image_link} alt={`${product.name}`} />
+                </Link>
+              </div>
+            ); 
           })
         }
       </div>
