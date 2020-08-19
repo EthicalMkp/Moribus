@@ -2,9 +2,13 @@ import React, { createContext, Component } from 'react';
 
 export const FilterDataContext = createContext();
 
-// Call the API request and the function in context to set the state. 
-// Call up the function to the component 
 
+// write context that contains the search field state, the search results array, and the search API request
+// pass all of the above as values in the provider
+// wrap your entire app in this provider
+// in your search component, consume all values from the provider, then use that to create and submit the form, as well as gather all the API results.
+
+// You shouldn’t need to put any of the context onto your single item page.​
 
 
 class FilterDataContextProvider extends Component {
