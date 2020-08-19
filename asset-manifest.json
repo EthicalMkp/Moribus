@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Moribus/static/css/main.98e7b31a.chunk.css",
+    "main.css": "/Moribus/static/css/main.956aa803.chunk.css",
     "main.js": "/Moribus/static/js/main.190e9d3d.chunk.js",
     "main.js.map": "/Moribus/static/js/main.190e9d3d.chunk.js.map",
     "runtime-main.js": "/Moribus/static/js/runtime-main.21ad8030.js",
@@ -9,10 +9,10 @@
     "static/js/2.4d023e1c.chunk.js": "/Moribus/static/js/2.4d023e1c.chunk.js",
     "static/js/2.4d023e1c.chunk.js.map": "/Moribus/static/js/2.4d023e1c.chunk.js.map",
     "index.html": "/Moribus/index.html",
-    "precache-manifest.f2646cc4550d2b26fe3c1f0f502ef535.js": "/Moribus/precache-manifest.f2646cc4550d2b26fe3c1f0f502ef535.js",
+    "precache-manifest.378ebbf65fd4e5d639c799d0bd9e37c3.js": "/Moribus/precache-manifest.378ebbf65fd4e5d639c799d0bd9e37c3.js",
     "service-worker.js": "/Moribus/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/Moribus/static/css/2.fb346933.chunk.css.map",
-    "static/css/main.98e7b31a.chunk.css.map": "/Moribus/static/css/main.98e7b31a.chunk.css.map",
+    "static/css/main.956aa803.chunk.css.map": "/Moribus/static/css/main.956aa803.chunk.css.map",
     "static/js/2.4d023e1c.chunk.js.LICENSE.txt": "/Moribus/static/js/2.4d023e1c.chunk.js.LICENSE.txt",
     "static/media/bannerImg1.jpg": "/Moribus/static/media/bannerImg1.2ad9bdac.jpg",
     "static/media/bannerImg2.jpg": "/Moribus/static/media/bannerImg2.28d4536d.jpg",
@@ -24,7 +24,7 @@
     "static/js/runtime-main.21ad8030.js",
     "static/css/2.fb346933.chunk.css",
     "static/js/2.4d023e1c.chunk.js",
-    "static/css/main.98e7b31a.chunk.css",
+    "static/css/main.956aa803.chunk.css",
     "static/js/main.190e9d3d.chunk.js"
   ]
 }
