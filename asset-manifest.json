@@ -1,25 +1,30 @@
 {
   "files": {
     "main.css": "/Moribus/static/css/main.dc884221.chunk.css",
-    "main.js": "/Moribus/static/js/main.82d886b4.chunk.js",
-    "main.js.map": "/Moribus/static/js/main.82d886b4.chunk.js.map",
+    "main.js": "/Moribus/static/js/main.a8d07499.chunk.js",
+    "main.js.map": "/Moribus/static/js/main.a8d07499.chunk.js.map",
     "runtime-main.js": "/Moribus/static/js/runtime-main.21ad8030.js",
     "runtime-main.js.map": "/Moribus/static/js/runtime-main.21ad8030.js.map",
     "static/css/2.fb346933.chunk.css": "/Moribus/static/css/2.fb346933.chunk.css",
-    "static/js/2.b20d54ec.chunk.js": "/Moribus/static/js/2.b20d54ec.chunk.js",
-    "static/js/2.b20d54ec.chunk.js.map": "/Moribus/static/js/2.b20d54ec.chunk.js.map",
+    "static/js/2.62870e99.chunk.js": "/Moribus/static/js/2.62870e99.chunk.js",
+    "static/js/2.62870e99.chunk.js.map": "/Moribus/static/js/2.62870e99.chunk.js.map",
     "index.html": "/Moribus/index.html",
-    "precache-manifest.9ced8a1cea1c9839bbb17efe2234d4c7.js": "/Moribus/precache-manifest.9ced8a1cea1c9839bbb17efe2234d4c7.js",
+    "precache-manifest.6c85de4b30cd40cba306736ec44f9665.js": "/Moribus/precache-manifest.6c85de4b30cd40cba306736ec44f9665.js",
     "service-worker.js": "/Moribus/service-worker.js",
     "static/css/2.fb346933.chunk.css.map": "/Moribus/static/css/2.fb346933.chunk.css.map",
     "static/css/main.dc884221.chunk.css.map": "/Moribus/static/css/main.dc884221.chunk.css.map",
-    "static/js/2.b20d54ec.chunk.js.LICENSE.txt": "/Moribus/static/js/2.b20d54ec.chunk.js.LICENSE.txt"
+    "static/js/2.62870e99.chunk.js.LICENSE.txt": "/Moribus/static/js/2.62870e99.chunk.js.LICENSE.txt",
+    "static/media/bannerImg1.jpg": "/Moribus/static/media/bannerImg1.2ad9bdac.jpg",
+    "static/media/bannerImg2.jpg": "/Moribus/static/media/bannerImg2.28d4536d.jpg",
+    "static/media/bannerImg3.jpg": "/Moribus/static/media/bannerImg3.a092f602.jpg",
+    "static/media/bannerImg4.jpg": "/Moribus/static/media/bannerImg4.39202c55.jpg",
+    "static/media/bannerImg5.jpg": "/Moribus/static/media/bannerImg5.692f3ab4.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.21ad8030.js",
     "static/css/2.fb346933.chunk.css",
-    "static/js/2.b20d54ec.chunk.js",
+    "static/js/2.62870e99.chunk.js",
     "static/css/main.dc884221.chunk.css",
-    "static/js/main.82d886b4.chunk.js"
+    "static/js/main.a8d07499.chunk.js"
   ]
 }
