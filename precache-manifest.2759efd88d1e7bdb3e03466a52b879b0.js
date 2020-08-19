@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9f0ed56d1aec44950a7888e5dfe3b360",
+    "revision": "7445b1bea06c7868889ab4c5ac74f6a5",
     "url": "/Moribus/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Moribus/static/css/2.fb346933.chunk.css"
   },
   {
-    "revision": "a29d0b3794461121cf28",
+    "revision": "240ca4f214a2bb2e7ca3",
     "url": "/Moribus/static/css/main.dc884221.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Moribus/static/js/2.4d023e1c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a29d0b3794461121cf28",
-    "url": "/Moribus/static/js/main.409463b7.chunk.js"
+    "revision": "240ca4f214a2bb2e7ca3",
+    "url": "/Moribus/static/js/main.bdc3d42e.chunk.js"
   },
   {
     "revision": "af46d216e1ad73cb3b53",
