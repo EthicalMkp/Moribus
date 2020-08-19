@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Catalogue from './Catalogue';
+import { withRouter } from 'react-router'; 
 
 class MakeupDetails extends Component {
   constructor(){
