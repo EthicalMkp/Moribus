@@ -30,7 +30,8 @@ class Catalogue extends Component {
       this.setState({
         makeupItems: AllData
       })
-      console.log(this.state.makeupItems.product_type)
+      console.log(this.state.makeupItems[0].product_colors[0].hex_value)
+      console.log(this.state.makeupItems[0].product_colors[0].colour_name)
     })
   }
   
